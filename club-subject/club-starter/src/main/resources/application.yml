@@ -31,3 +31,6 @@ spring:
 publicKey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKNqCSntC5rjY5BG+RIW6ZJ7oGt/vHxj4Yv3VmHvgSnVI9zFRaSE6WqcoH4y/YMc7TcrEaGTl3fAz1BRCsj7XBkCAwEAAQ==
 logging:
   config: classpath:log4j2-spring.xml
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #mybatis跟mysql的查询语句
