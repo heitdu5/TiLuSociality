@@ -19,12 +19,24 @@ public class FileController {
     @Resource
     private FileService fileService;
 
+    /**
+     * 列出所有桶
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/testGetAllBuckets")
     public String testGetAllBuckets() throws Exception {
         List<String> allBucket = fileService.getAllBucket();
         return allBucket.get(0);
     }
 
+    /**
+     *
+     * @param bucketName
+     * @param objectName
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/getUrl")
     public String getUrl(String bucketName, String objectName) throws Exception {
         return fileService.getUrl(bucketName, objectName);
@@ -32,11 +44,12 @@ public class FileController {
 
     /**
      * 上传文件
+     * 要返回一个地址是多少的信息
      */
-//    @RequestMapping("/upload")
-//    public Result upload(MultipartFile uploadFile, String bucket, String objectName) throws Exception {
-//        String url = fileService.uploadFile(uploadFile, bucket, objectName);
-//        return Result.ok(url);
-//    }
+    @RequestMapping("/upload")
+    public String upload(MultipartFile uploadFile, String bucket, String objectName)  {
+
+        return fileService.uploadFile(uploadFile,bucket,objectName);
+    }
 
 }

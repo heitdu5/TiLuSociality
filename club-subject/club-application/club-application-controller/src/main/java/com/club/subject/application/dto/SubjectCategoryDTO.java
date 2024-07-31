@@ -3,6 +3,7 @@ package com.club.subject.application.dto;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * 题目分类(SubjectCategory)实体类
@@ -40,10 +41,10 @@ public class SubjectCategoryDTO implements Serializable {
      */
     private Integer count;
 
-//    /**
-//     * 标签信息
-//     */
-//    private List<SubjectLabelDTO> labelDTOList;
+    /**
+     * 标签信息
+     */
+    private List<SubjectLabelDTO> labelDTOList;
 
 }
 

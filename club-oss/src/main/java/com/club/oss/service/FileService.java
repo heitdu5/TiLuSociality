@@ -33,13 +33,17 @@ public class FileService {
         return storageAdapter.getUrl(bucketName,objectName);
     }
 
+
     /**
      * 上传文件
      */
     public String uploadFile(MultipartFile uploadFile, String bucket, String objectName){
         storageAdapter.uploadFile(uploadFile,bucket,objectName);
-        objectName = objectName + "/" + uploadFile.getOriginalFilename();
-        return storageAdapter.getUrl(bucket, objectName);
+        if (objectName != null) {
+            return storageAdapter.getUrl(bucket, objectName+ "/" + uploadFile.getOriginalFilename());
+        } else {
+            return storageAdapter.getUrl(bucket, objectName);
+        }
     }
 }
 

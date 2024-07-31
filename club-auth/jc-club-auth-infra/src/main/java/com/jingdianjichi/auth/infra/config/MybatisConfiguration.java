@@ -4,6 +4,9 @@ import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * sql拦截器自动翻译·
+ */
 @Configuration
 public class MybatisConfiguration {
 

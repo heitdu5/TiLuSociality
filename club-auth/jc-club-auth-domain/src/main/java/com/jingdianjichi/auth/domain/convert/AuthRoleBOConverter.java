@@ -18,4 +18,5 @@ public interface AuthRoleBOConverter {
 
     AuthRole convertBOToEntity(AuthRoleBO authRoleBO);
 
+
 }

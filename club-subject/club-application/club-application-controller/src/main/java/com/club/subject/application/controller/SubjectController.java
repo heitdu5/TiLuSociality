@@ -13,13 +13,12 @@ import com.club.subject.domain.service.SubjectInfoDomainService;
 import com.club.subject.infra.basic.entity.SubjectCategory;
 import com.club.subject.infra.basic.service.SubjectCategoryService;
 import com.google.common.base.Preconditions;
+import feign.Param;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,12 +28,16 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @Slf4j
+@RequestMapping("/subject")
 public class SubjectController {
 
 
     private final SubjectCategoryService subjectCategoryService;
 
     private final SubjectInfoDomainService subjectInfoDomainService;
+
+    private final RocketMQTemplate rocketMQTemplate;
+
 
     @GetMapping("/test")
     public String test() {
@@ -114,6 +117,18 @@ public class SubjectController {
             log.error("SubjectCategoryController.add.error:{}", e.getMessage(), e);
             return Result.fail("查询题目详情失败");
         }
+    }
+
+
+
+
+
+
+
+    @PostMapping("/pushMessage")
+    public Result<Boolean> pushMessage(@Param("id") Long id ) {
+        rocketMQTemplate.convertAndSend("first-test","鸡哥鸡屁股" + id);
+        return Result.ok(true);
     }
 
 

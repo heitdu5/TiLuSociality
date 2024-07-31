@@ -1,5 +1,6 @@
 package com.club.subject.application.config;
 
+import com.club.subject.application.interceptor.LoginInterceptor;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -24,11 +25,11 @@ public class GlobalConfig extends WebMvcConfigurationSupport {
         converters.add(mappingJackson2HttpMessageConverter());
     }
 
-//    @Override
-//    protected void addInterceptors(InterceptorRegistry registry) {
-//        registry.addInterceptor(new LoginInterceptor())
-//                .addPathPatterns("/**");
-//    }
+    @Override
+    protected void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new LoginInterceptor())
+                .addPathPatterns("/**");
+    }
 
     /**
      * 自定义mappingJackson2HttpMessageConverter
@@ -36,7 +37,7 @@ public class GlobalConfig extends WebMvcConfigurationSupport {
      */
     private MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter() {
         ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+        objectMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);//禁用序列化时对空对象的检查
         objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);//返回给前端时隐藏为Null的字段
         return new MappingJackson2HttpMessageConverter(objectMapper);
     }

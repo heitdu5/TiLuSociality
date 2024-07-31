@@ -1,4 +1,4 @@
-package com.jingdianjichi.auth.application.context;
+package com.club.subject.common.context;
 
 import java.util.Map;
 import java.util.Objects;
@@ -7,11 +7,10 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * 登录上下文对象
  *
- * @author: ChickenWing
- * @date: 2023/11/26
  */
 public class LoginContextHolder {
 
+    //这个类能让子线程继承父线程中已经设置的ThreadLocal值
     private static final InheritableThreadLocal<Map<String, Object>> THREAD_LOCAL
             = new InheritableThreadLocal<>();
 

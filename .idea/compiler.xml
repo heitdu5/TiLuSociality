@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="jc-club-auth-infra" />
+        <module name="jc-club-auth-application-job" />
+        <module name="club-domain" />
+        <module name="club-application-controller" />
+        <module name="jc-club-auth-api" />
+        <module name="club-starter" />
+        <module name="club-wx" />
+        <module name="jc-club-auth-domain" />
+        <module name="jc-club-auth-starter" />
+        <module name="club-application-job" />
+        <module name="club-gateway" />
+        <module name="jc-club-auth-application-mq" />
+        <module name="club-infra" />
+        <module name="club-oss" />
+        <module name="club-subject-api" />
+        <module name="com-club" />
+        <module name="jc-club-auth-common" />
+        <module name="jc-club-auth-application-controller" />
+        <module name="club-application-mq" />
+        <module name="club-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="club-auth (1) (com.yhclub)" target="1.8" />
+      <module name="club-auth (2) (org.example)" target="1.8" />
+      <module name="club-yh-auth" target="1.8" />
+      <module name="com-club" target="1.7" />
+      <module name="yh-com-subject" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
