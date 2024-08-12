@@ -192,9 +192,11 @@
         and b.label_id = #{labelId}
         <if test="cursor !=null and cursor == 1">
             and a.id > #{subjectId}
+            order by a.id asc
         </if>
         <if test="cursor !=null and cursor == 0">
             and a.id &lt; #{subjectId}
+            order by a.id desc
         </if>
         limit 0,1
     </select>

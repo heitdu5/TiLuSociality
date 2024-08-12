@@ -12,7 +12,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Properties;
 
-
+/**
+ * 慢sql打印
+ */
 @Intercepts({
         @Signature(type = Executor.class, method = "update", args = {MappedStatement.class,
                 Object.class}),

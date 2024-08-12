@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/club-auth/jc-club-auth-api/jc-club-auth-api.iml" filepath="$PROJECT_DIR$/club-auth/jc-club-auth-api/jc-club-auth-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/club-auth/jc-club-auth-common/jc-club-auth-common.iml" filepath="$PROJECT_DIR$/club-auth/jc-club-auth-common/jc-club-auth-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/club-auth/jc-club-auth-domain/jc-club-auth-domain.iml" filepath="$PROJECT_DIR$/club-auth/jc-club-auth-domain/jc-club-auth-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/club-auth/jc-club-auth-infra/jc-club-auth-infra.iml" filepath="$PROJECT_DIR$/club-auth/jc-club-auth-infra/jc-club-auth-infra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/club-auth/jc-club-auth-starter/jc-club-auth-starter.iml" filepath="$PROJECT_DIR$/club-auth/jc-club-auth-starter/jc-club-auth-starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/yh717.iml" filepath="$PROJECT_DIR$/.idea/yh717.iml" />
     </modules>
   </component>

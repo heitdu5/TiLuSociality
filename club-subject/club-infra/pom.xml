@@ -60,6 +60,25 @@
             <artifactId>jc-club-auth-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
+        <!--使用原生-->
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-client</artifactId>
+            <version>7.5.2</version>
+        </dependency>
+        <!--高级客户端-->
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+            <version>7.5.2</version>
+        </dependency>
+        <!-- 引入工具类方便操作es -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.4</version>
+        </dependency>
     </dependencies>
 
 </project>

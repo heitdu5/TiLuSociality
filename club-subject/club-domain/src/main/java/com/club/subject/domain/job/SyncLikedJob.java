@@ -1,5 +1,6 @@
 package com.club.subject.domain.job;
 
+import com.club.subject.domain.service.SubjectLikedDomainService;
 import com.xxl.job.core.context.XxlJobHelper;
 import com.xxl.job.core.handler.annotation.XxlJob;
 import lombok.extern.slf4j.Slf4j;
@@ -7,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -33,6 +35,8 @@ import java.util.concurrent.TimeUnit;
 public class SyncLikedJob {
     private static Logger logger = LoggerFactory.getLogger(SyncLikedJob.class);
 
+    @Resource
+    private SubjectLikedDomainService subjectLikedDomainService;
 
     /**
      * 点击量等详情信息同步
@@ -41,6 +45,7 @@ public class SyncLikedJob {
     public void syncClickHandler() throws Exception {
         XxlJobHelper.log("syncLikedHandler.start");
         try {
+            subjectLikedDomainService.syncLiked();
             log.info("123456");
         } catch (Exception e) {
             XxlJobHelper.log("syncClickHandler.error" + e.getMessage());

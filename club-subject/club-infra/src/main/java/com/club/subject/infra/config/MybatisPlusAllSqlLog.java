@@ -21,6 +21,10 @@ import java.util.List;
 import java.util.Locale;
 import java.util.regex.Matcher;
 
+
+/**
+ * 用于打印时符号替换
+ */
 public class MybatisPlusAllSqlLog implements InnerInterceptor {
     public static final Logger log = LoggerFactory.getLogger("sys-sql");
 

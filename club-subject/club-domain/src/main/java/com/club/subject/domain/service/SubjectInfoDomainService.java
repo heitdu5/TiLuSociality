@@ -3,6 +3,7 @@ package com.club.subject.domain.service;
 import com.club.subject.common.entity.PageResult;
 import com.club.subject.domain.entity.SubjectInfoBO;
 import com.club.subject.domain.entity.SubjectLabelBO;
+import com.club.subject.infra.basic.entity.SubjectInfoEs;
 
 import java.util.List;
 
@@ -29,12 +30,14 @@ public interface SubjectInfoDomainService {
      */
     SubjectInfoBO querySubjectInfo(SubjectInfoBO subjectInfoBO);
 
+
+
+    List<SubjectInfoBO> getContributeList();
+
     /**
      * 全文检索
      */
-//    PageResult<SubjectInfoEs> getSubjectPageBySearch(SubjectInfoBO subjectInfoBO);
-
-    List<SubjectInfoBO> getContributeList();
+    PageResult<SubjectInfoEs> getSubjectPageBySearch(SubjectInfoBO subjectInfoBO);
 
 
 }

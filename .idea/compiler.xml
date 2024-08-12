@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jc-club-auth-infra" />
+        <module name="easy-gen-code-spring-boot-starter" />
         <module name="jc-club-auth-application-job" />
         <module name="club-domain" />
         <module name="club-application-controller" />
         <module name="jc-club-auth-api" />
+        <module name="club-practice-api" />
         <module name="club-starter" />
         <module name="club-wx" />
         <module name="jc-club-auth-domain" />
@@ -20,11 +22,13 @@
         <module name="jc-club-auth-application-mq" />
         <module name="club-infra" />
         <module name="club-oss" />
+        <module name="club-practice-server" />
         <module name="club-subject-api" />
         <module name="com-club" />
         <module name="jc-club-auth-common" />
         <module name="jc-club-auth-application-controller" />
         <module name="club-application-mq" />
+        <module name="jc-club-gen" />
         <module name="club-common" />
       </profile>
     </annotationProcessing>
@@ -35,5 +39,10 @@
       <module name="com-club" target="1.7" />
       <module name="yh-com-subject" target="1.7" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="jc-club-gen" options="-parameters" />
+    </option>
   </component>
 </project>

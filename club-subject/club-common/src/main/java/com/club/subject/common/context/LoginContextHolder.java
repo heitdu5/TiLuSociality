@@ -35,7 +35,7 @@ public class LoginContextHolder {
     public static Map<String, Object> getThreadLocalMap() {
         Map<String, Object> map = THREAD_LOCAL.get();
         if (Objects.isNull(map)) {
-            map = new ConcurrentHashMap<>();
+            map = new ConcurrentHashMap<>();//ConcurrentHashMap不允许放null，所以在拦截器应该判断有没有loginid的请求头，没有就不放
             THREAD_LOCAL.set(map);
         }
         return map;

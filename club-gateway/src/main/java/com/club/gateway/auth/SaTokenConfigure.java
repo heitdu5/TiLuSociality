@@ -27,10 +27,10 @@ public class SaTokenConfigure {
                 System.out.println("--------- 请求进入了拦截器，访问的 path 是：" + SaHolder.getRequest().getRequestPath());
 
                 // 登录校验 -- 拦截所有路由，并排除/user/doLogin 用于开放登录 
-                SaRouter.match("/auth/**", "/auth/user/doLogin", r -> StpUtil.checkRole("admin"));
+                SaRouter.match("/auth/**", "/auth/user/doLogin", r -> StpUtil.checkRole("admin_user"));
                 // 权限认证 -- 不同模块, 校验不同权限
                 SaRouter.match("/oss/**", r -> StpUtil.checkLogin());
-                SaRouter.match("/subject/subject/add", r -> StpUtil.checkPermission("subject:add"));
+                SaRouter.match("/subject/subject/add", r -> StpUtil.checkPermission("subject:add1"));
                 SaRouter.match("/subject/**", r -> StpUtil.checkLogin());
 
 

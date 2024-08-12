@@ -17,6 +17,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.collections4.MapUtils;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.*;
@@ -129,7 +130,11 @@ public class SubjectCategoryDomainServiceImpl implements SubjectCategoryDomainSe
 
         completableFutureList.forEach( future ->{
             try {
-                map.putAll(future.get());
+                Map<Long, List<SubjectLabelBO>> resultMap = future.get();
+                if (!MapUtils.isEmpty(resultMap)) {
+                    map.putAll(resultMap);
+                }
+
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             } catch (ExecutionException e) {
@@ -138,7 +143,10 @@ public class SubjectCategoryDomainServiceImpl implements SubjectCategoryDomainSe
         });
 
         categoryBOList.forEach(categoryBo ->{
-             categoryBo.setLabelBOList(map.get(categoryBo.getId()));
+            if (!CollectionUtils.isEmpty(map.get(categoryBo.getId()))) {
+                categoryBo.setLabelBOList(map.get(categoryBo.getId()));
+            }
+
         });
         //方式一、FutureTask
 //        List<FutureTask<Map<Long,List<SubjectLabelBO>>>> futureTaskList =new LinkedList<>();
