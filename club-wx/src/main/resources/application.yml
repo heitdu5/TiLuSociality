@@ -1,0 +1,37 @@
+server:
+  port: 3012
+spring:
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 1
+    # Redis服务器地址
+    host: 192.168.232.112
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码（默认为空）
+    password: yh1234
+    # 连接超时时间
+    timeout: 2s
+    lettuce: #使用这行属性需要引入commons-pool2依赖
+      pool:
+        # 连接池最大连接数
+        max-active: 200
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1ms
+        # 连接池中的最大空闲连接
+        max-idle: 10
+        # 连接池中的最小空闲连接
+        min-idle: 0
+#nacos:
+#  config:
+#    access-key: nacos
+#    secret-key: nacos
+#    data-id: jc-club-oss
+#    group: DEFAULT_GROUP
+#    type: yaml
+#    server-addr: http://192.168.232.112:8848/
+#    auto-refresh: true #表示是否自动刷新配置，设置为true表示开启自动刷新。
+#    remote-first: true #表示是否优先使用远程配置，设置为true表示优先使用远程配置。
+#    bootstrap:
+#      enable: true #启用Bootstrap
+#当前注释是因为bootstrap已经代替上面配置
