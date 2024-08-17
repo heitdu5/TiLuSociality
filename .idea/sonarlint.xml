@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SonarLintProjectSettings">
+    <option name="moduleMapping">
+      <map>
+        <entry key="club-circle" value="jc-club-circle" />
+        <entry key="club-circle-api" value="jc-club-circle-api" />
+        <entry key="club-circle-server" value="jc-club-circle-server" />
+        <entry key="club-interview" value="club-circle (1)" />
+      </map>
+    </option>
+  </component>
+</project>
