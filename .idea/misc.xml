@@ -4,30 +4,36 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/yh-com-subject/yh-com-subject/pom.xml" />
-        <option value="$PROJECT_DIR$/com-club/pom.xml" />
-        <option value="$PROJECT_DIR$/club-subject/pom.xml" />
-        <option value="$PROJECT_DIR$/club-oss/pom.xml" />
-        <option value="$PROJECT_DIR$/club-auth/pom.xml" />
-        <option value="$PROJECT_DIR$/club-gateway/pom.xml" />
-        <option value="$PROJECT_DIR$/club-yh-auth/pom.xml" />
-        <option value="$PROJECT_DIR$/club-wx/pom.xml" />
         <option value="$PROJECT_DIR$/jc-club-gen/pom.xml" />
         <option value="$PROJECT_DIR$/jc-club-common-starter/pom.xml" />
-        <option value="$PROJECT_DIR$/club-practice/pom.xml" />
+        <option value="$PROJECT_DIR$/club-wx/pom.xml" />
+        <option value="$PROJECT_DIR$/club-auth/pom.xml" />
         <option value="$PROJECT_DIR$/asyncTool/pom.xml" />
         <option value="$PROJECT_DIR$/club-circle/pom.xml" />
+        <option value="$PROJECT_DIR$/club-circle/club-circle-api/pom.xml" />
+        <option value="$PROJECT_DIR$/club-circle/club-circle-server/pom.xml" />
+        <option value="$PROJECT_DIR$/club-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/club-interview/pom.xml" />
+        <option value="$PROJECT_DIR$/club-interview/club-interview-api/pom.xml" />
+        <option value="$PROJECT_DIR$/club-interview/club-interview-server/pom.xml" />
+        <option value="$PROJECT_DIR$/club-oss/pom.xml" />
+        <option value="$PROJECT_DIR$/club-practice/pom.xml" />
+        <option value="$PROJECT_DIR$/club-practice/club-practice-api/pom.xml" />
+        <option value="$PROJECT_DIR$/club-practice/club-practice-server/pom.xml" />
+        <option value="$PROJECT_DIR$/club-subject/pom.xml" />
+        <option value="$PROJECT_DIR$/club-subject/club-application/pom.xml" />
+        <option value="$PROJECT_DIR$/club-subject/club-application/club-application-controller/pom.xml" />
+        <option value="$PROJECT_DIR$/club-subject/club-application/club-application-job/pom.xml" />
+        <option value="$PROJECT_DIR$/club-subject/club-application/club-application-mq/pom.xml" />
+        <option value="$PROJECT_DIR$/club-subject/club-common/pom.xml" />
+        <option value="$PROJECT_DIR$/club-subject/club-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/club-subject/club-infra/pom.xml" />
+        <option value="$PROJECT_DIR$/club-subject/club-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/club-subject/club-subject-api/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/club-yh-auth/pom.xml" />
-        <option value="$PROJECT_DIR$/com-club/pom.xml" />
-      </set>
-    </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_22" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
