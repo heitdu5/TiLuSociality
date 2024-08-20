@@ -1,7 +1,7 @@
 # yh717
 
 #### Description
-计算机招聘刷题社区
+互联网招聘交流分享知识刷题社区
 
 #### Software Architecture
 Software architecture description

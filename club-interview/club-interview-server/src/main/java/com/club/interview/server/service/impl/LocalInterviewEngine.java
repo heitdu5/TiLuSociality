@@ -90,8 +90,8 @@ public class LocalInterviewEngine implements InterviewEngine {
             return view;
         }).collect(Collectors.toList());
         if (views.size() > 8) {
-            Collections.shuffle(views);
-            views = views.subList(0, 8);
+            Collections.shuffle(views);//随机打乱
+            views = views.subList(0, 8);//截取前8个元素
         }
         InterviewQuestionVO vo = new InterviewQuestionVO();
         vo.setQuestionList(views);

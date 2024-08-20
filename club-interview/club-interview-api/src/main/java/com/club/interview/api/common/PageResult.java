@@ -39,7 +39,7 @@ public class PageResult<T> implements Serializable {
     public void setTotal(Integer total) {
         this.total = total;
         if (this.pageSize > 0) {
-            this.totalPages = (total / this.pageSize) + (total % this.pageSize == 0 ? 0 : 1);
+            this.totalPages = (total / this.pageSize) + (total % this.pageSize == 0 ? 0 : 1);//计算总页数
         } else {
             this.totalPages = 0;
         }

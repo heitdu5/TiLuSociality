@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-08-05T17:12:42+0800",
+    date = "2024-08-18T01:21:42+0800",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 1.8.0_391 (Oracle Corporation)"
 )
 public class SubjectLikedDTOConverterImpl implements SubjectLikedDTOConverter {
@@ -19,6 +19,8 @@ public class SubjectLikedDTOConverterImpl implements SubjectLikedDTOConverter {
 
         SubjectLikedBO subjectLikedBO = new SubjectLikedBO();
 
+        subjectLikedBO.setPageNo( subjectLikedDTO.getPageNo() );
+        subjectLikedBO.setPageSize( subjectLikedDTO.getPageSize() );
         subjectLikedBO.setId( subjectLikedDTO.getId() );
         subjectLikedBO.setSubjectId( subjectLikedDTO.getSubjectId() );
         subjectLikedBO.setLikeUserId( subjectLikedDTO.getLikeUserId() );

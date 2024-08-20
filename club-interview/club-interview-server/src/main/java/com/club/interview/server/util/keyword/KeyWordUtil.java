@@ -4,6 +4,9 @@ import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 
 import java.util.*;
 
+/**
+ * 敏感词dfa算法工具类
+ */
 public class KeyWordUtil {
 
     /**
