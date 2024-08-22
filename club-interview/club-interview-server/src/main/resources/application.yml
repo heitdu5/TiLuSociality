@@ -51,7 +51,3 @@ spring:
 publicKey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKNqCSntC5rjY5BG+RIW6ZJ7oGt/vHxj4Yv3VmHvgSnVI9zFRaSE6WqcoH4y/YMc7TcrEaGTl3fAz1BRCsj7XBkCAwEAAQ==
 logging:
   config: classpath:log4j2-spring.xml
-
-ali:
-  access:
-    key: sk-136d93c7961d4a978624a61f49a12f72
