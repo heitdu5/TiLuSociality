@@ -2,6 +2,7 @@ package com.club.interview.server.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.club.interview.api.common.KeyConstants;
 import com.club.interview.api.enums.EngineEnum;
 import com.club.interview.api.req.InterviewSubmitReq;
 import com.club.interview.api.req.StartReq;
@@ -12,6 +13,7 @@ import com.club.interview.server.service.InterviewEngine;
 import com.club.interview.server.util.EvaluateUtils;
 import com.club.interview.server.util.HttpUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.*;
@@ -28,7 +30,8 @@ import java.util.stream.Collectors;
 public class AlBLInterviewEngine implements InterviewEngine {
 
     //换自己的token
-    private static final String apiKey = "sk-136d93c7961d4a978624a61f49a12f72";
+//    @Value("${ali.access.key}")
+//    private String apiKey;
 
     @Override
     public EngineEnum engineType() {
@@ -138,7 +141,7 @@ public class AlBLInterviewEngine implements InterviewEngine {
         jsonData.put("input",input);
         jsonData.put("parameters",new JSONObject());
         Map<String, String> headerMap = new HashMap<>();
-        headerMap.put("Authorization", "Bearer " + apiKey);
+        headerMap.put("Authorization", "Bearer " + KeyConstants.ALI_ACCESS_KEY);
         headerMap.put("Content-Type", "application/json");
         headerMap.put("X-DashScope-SSE", "enable");
 
@@ -179,7 +182,7 @@ public class AlBLInterviewEngine implements InterviewEngine {
 
 
         Map<String, String> headerMap = new HashMap<>();
-        headerMap.put("Authorization", "Bearer " + apiKey);
+        headerMap.put("Authorization", "Bearer " + KeyConstants.ALI_ACCESS_KEY);
         headerMap.put("Content-Type", "application/json");
         headerMap.put("X-DashScope-SSE", "enable");
 

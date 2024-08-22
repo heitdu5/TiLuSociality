@@ -21,7 +21,7 @@ public class TreeUtils {
         return nodes.stream().filter(Objects::nonNull).peek(pnd -> {
             List<TreeNode> ts = groups.get(pnd.getNodeId());
             pnd.setChildren(ts);
-        }).filter(TreeNode::getRootNode).collect(Collectors.toList());
+        }).filter(TreeNode::getRootNode).collect(Collectors.toList());//对每个非空的节点执行一个操作。
 
     }
     //这两个方法我理解为把目标id的节点及其子节点全部找出来
